@@ -1,0 +1,34 @@
+----- PROGRAMMING EXPERIENCES -----
+
+**** My First Learning Programming by reading a book ****
+
+My first experience to learn programming by reading a book. The title is "Learning Web Design: A Beginner's Guide to HTML, CSS, JavaScript, and Web Graphics" writteny by Jennifer Robbins.
+I learn by my self on May 2021. I learn about basic HTML5, CSS3, and JS. I had finished read this book for a month. Then, i make my first website about my girlfriends. Honesty, it was not to impressed her, i just
+want to make my first project is simple and easy.
+
+**** Join My First Bootcamp in Kotakode x Progate ****
+
+For the next, i was joined my first bootcamp in Kotakode x Progate for a month. It was still the same, i learn by myself. I learn in progate via online in its website. I learn a lot about JavaScript.
+For the first time it was absolutely challenging me but my curiousity was high. So, i learnt the best that i could. 
+
+After a month, i build my first project to build a simple calculator using HTML, CSS, and JavaScript. I was excited to create my own calculator. Finally, i was so happy, because my project had done.
+
+**** Learning in Skilvul.com & Join Binus Bootcamp x Progate ****
+
+I still curious and i want to improve my programming skill. Then, i was joined in Binus Bootcamp x Progate to learn Git, Command line, HTML, CSS, and JS. So, i was confused about the terminal. It was liked
+the hacker movie that i ever watched. I was bad to use terminal, comman line and git. Because i never touch or open this app before. But the easiest way to boost my skills by watching the tutorial in YouTube.
+So, it was helpful, really helpful. And i am used to using git and command line for every project.
+
+For learning in skilvul i just learnt about HTML, CSS, Basic JavaScript and ES6. It was a new things that i found. I found a lot of method like map, forEach, filter, shift, unshift, pop, push, etc.
+I also learned about an object, array, asynchronous and synchronous, class, function, etc. It makes me a headache for that moment. But i stil going on to learn. After finished the task from skilvu, 
+i got 4 certificates. 
+
+**** FrecodeCamp.com IS RECOMMENDED WEBSITE TO LEARN WEB PROGRAMMING ESPECIALLY JAVASCRIPT ****
+
+**** TAKE MANY COURSE IN UDEMY ABOUT FRON-END WEB DEVELOPER ****
+
+**** GET A SCHOLARCHIP FROM INDOSAT OREDOO TO BE FRONT-END WEB IN DICODING STATUS: INTERMEDIATE LEVEL AND ON GOING****
+
+**** GET AN TRAINING SESSION FROM GOJEK TO BE FRONT-END WEB UNTIL INTERMEDIATE LEVEL FOR 5 MONTHS ****
+
+
