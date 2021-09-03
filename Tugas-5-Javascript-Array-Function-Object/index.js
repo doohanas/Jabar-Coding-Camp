@@ -22,7 +22,7 @@ for (var i = 0; i < animalList.length; i++) {
 
 //Tulislah sebuah function dengan nama introduce() yang memproses paramater yang dikirim menjadi sebuah kalimat perkenalan seperti berikut: "Nama saya [name], umur saya [age] tahun, alamat saya di [address], dan saya punya hobby yaitu [hobby]!"
 
-//OUTPUT : "Nama saya John, umur saya 30 tahun, alamat saya di Jalan Pelesiran, dan saya punya hobby yaitu Gaming"
+//OUTPUT : "Nama saya Doohan, umur saya 23 tahun, alamat saya di Bekasi, dan saya punya hobby yaitu Reading a book"
 
 var data = {
   name: "Doohan",
