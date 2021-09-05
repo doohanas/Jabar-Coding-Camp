@@ -16,10 +16,9 @@ function next_date(year, month, day) {
   var date = new Date(year, month, day);
 
   var nextDate = new Date(date);
-  nextDate.setDate(date.getDate());
-  nextDate.setDate(date.getMonth());
+  nextDate.setDate(date.getDate() + 1) ;
 
   return nextDate;
 }
 
-console.log((next_date(2020, 1, 5)));
+console.log((next_date(2020, 4, 29)));
