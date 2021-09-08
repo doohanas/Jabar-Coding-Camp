@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <button onclick="vm.openForm()">Open Form</button>
+      <h1>Total: {{ total }}</h1>
+      <h1>Average: {{ average }}</h1>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+      var vm = new Vue({
+        el: "#app",
+        data: {
+          number: 0,
+          total: 0,
+          average: 0,
+        },
+        methods: {
+          openForm: function () {
+            const arr = [];
+
+            const handleInput = () => {
+              this.number = parseInt(prompt("Please, Input Your Number"));
+              arr.push(this.number);
+            };
+
+            const handleAverage = () => {
+              this.average = this.total / arr.length;
+            };
+
+            const handleTotal = () => {
+              this.total = arr.reduce((total, num) => {
+                return total + num;
+              });
+              if (this.total <= 10) {
+                handleInput();
+                handleTotal();
+              } else {
+                handleAverage();
+                alert("Thank you, check your result here!!!");
+              }
+            };
+
+            handleInput();
+            handleTotal();
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
