@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aplikasi Vue: Tugas Form & Input Vue</title>
+  </head>
+  <body>
+    <div id="app">
+      <input v-model="searchBook" type="text" placeholder="Search..." />
+      <ul>
+        <li v-for="book in getBook">{{book}}</li>
+      </ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+      let app = new Vue({
+        el: "#app",
+        data: {
+          books: [
+            "Clean Code A Handbook of Agile Software Craftsmanship",
+            "Introduction to Algorithms",
+            "Elements of Reusable Object-Oriented Software",
+            "The Pragmatic Programmer",
+            "Improving the Design of Existing Code",
+            "Design and Build Websites",
+            "A Beginner’s Guide to HTML, CSS, JavaScript, and Web Graphics",
+            "A Modern Introduction to Programming",
+            "Elements of Reusable Object-Oriented Software",
+          ],
+          searchBook: "",
+        },
+        computed: {
+          getBook: {
+            get() {
+              return this.books.filter((book) =>
+                book.toLowerCase().includes(this.searchBook.toLowerCase())
+              );
+            },
+          },
+        },
+        method: {},
+      });
+    </script>
+  </body>
+</html>
