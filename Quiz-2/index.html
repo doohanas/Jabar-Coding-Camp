@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aplikasi Vue: Tugas Form & Input Vue</title>
+  </head>
+  <body>
+    <div id="app">
+      <form @submit.prevent="addUser">
+        <input v-model="newName" type="text" placeholder="Your Name..." />
+        <button @click="addUser" type="button">Add</button>
+      </form>
+
+      <ul>
+        <li v-for="(user, index) in users">
+          <a>{{user.name}} - {{index}}</a>
+          <button>Edit</button> ||
+          <button>Delete</button>
+        </li>
+      </ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+      let app = new Vue({
+        el: "#app",
+        data: {
+          users: [
+            { name: "Doohan Aditya Saputro" },
+            { name: "Rubi Purba" },
+            { name: "Adit Pamungkas" },
+            { name: "Ilham Wicaksono" },
+            { name: "Gangga Wicaksono" },
+          ],
+          newName: "",
+        },
+        computed: {},
+        methods: {
+          addUser: function () {
+            this.users.push({ name: this.newName });
+            this.newName = "";
+            console.log(this.users);
+            alert("Congrats, you have been add a new user!");
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
