@@ -51,7 +51,6 @@
             </thead> -->
 
             <tbody>
-
                 <members-component 
                 v-for="member in members"
                 :key="member.id" 
@@ -74,7 +73,6 @@
                     <button @click="addPhoto(member)" type="button" >Upload File</button>
                 </td>
                 </tr> -->
-
             </tbody>
 
         </table>
@@ -91,9 +89,9 @@
                 <td>Address: {{member.address}}</td>
                 <td>No. HP: {{member.no_hp}}</td>
                 <td>
-                    <button @click="edituser(member)" type="button">Edit</button>
-                    <button @click="removeuser(member.id)" type="button" :key="member.id">Remove</button>
-                    <button @click="addphoto(member)" type="button" >Upload File</button>
+                    <button @click="$emit('edit-user', member)" type="button">Edit</button>
+                    <button @click="$emit('remove-user', member.id)" type="button">Remove</button>
+                    <button @click="$emit('add-photo', member)" type="button" >Upload File</button>
                 </td>
             </tr>
         </div>
@@ -110,17 +108,6 @@
             photodomain: String,
             id: Number
         },
-        methods : {
-            edituser() {
-               this.$emit("edit-user", "member");
-            },
-            removeuser() {
-                this.$emit("remove-user", "member.id");
-            },
-            addphoto() {
-                this.$emit("add-photo", "member");
-            }
-        }
     }
 
       const app = new Vue({
