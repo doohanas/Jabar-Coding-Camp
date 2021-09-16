@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>TUGAS 14 VUE ROUTER</h1>
+      <router-link to="/">Home</router-link>
+      <router-link to="/about">About</router-link>
+      <router-link to="/categories">Categories</router-link>
+      <hr />
+
+      <router-view></router-view>
+    </div>
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+
+    <script type="module">
+      import { CategoriesComponent } from "./CategoriesComponent.js";
+      import { CategoryComponent } from "./CatComponent.js";
+
+      const Home = { template: "<div>Ini Halaman Home</div>" };
+      const About = { template: "<div>Ini Halaman About</div>" };
+
+      const routes = [
+        { path: "/", component: Home, alias: "/home" }, //Allow to access by everyone
+        {
+          path: "/about",
+          component: About,
+          meta: { login: true, admin: false },
+        }, //Allow to access if the user has been login
+        {
+          path: "/categories",
+          component: CategoriesComponent,
+          meta: { login: true, admin: true },
+        }, // Allow to access if the user has been login and an admin
+        { path: "/category/:id", component: CategoryComponent },
+        { path: "*", redirect: "/" },
+      ];
+
+      const router = new VueRouter({
+        routes,
+      });
+
+      router.beforeEach((to, from, next) => {
+        if (
+          to.matched.some((record) => record.meta.login || record.meta.admin)
+        ) {
+          let auth = false;
+          if (!auth) {
+            alert("Login First");
+            next(false);
+          } else {
+            next();
+          }
+        } else {
+          next();
+        }
+      });
+
+      const vm = new Vue({
+        el: "#app",
+        router,
+      });
+    </script>
+  </body>
+</html>
